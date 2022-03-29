@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "Mostafa Ahangarha Portfoio",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint . && npx stylelint \"**/*.{css,scss}\" && npx hint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahangarha/ahangarha.github.io.git"
+  },
+  "author": "Mostafa Ahangarha",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ahangarha/ahangarha.github.io/issues"
+  },
+  "homepage": "https://ahangarha.github.io",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "hint": "^6.1.9",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "lighthouse": "^9.2.0"
+  }
+}
