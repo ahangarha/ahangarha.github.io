@@ -235,12 +235,17 @@ header .menu-toggle {
   display: flex;
   align-items: center;
   padding: 0;
-  gap: 1.25rem;
+  gap: 0.25rem;
   font-size: 1.25rem;
 }
 
 #hero ul a {
   color: var(--neutrals-n400);
+  padding: 0 0.5rem;
+}
+
+#hero ul a:hover {
+  color: var(--primary);
 }
 
 #works {
@@ -374,12 +379,17 @@ header .menu-toggle {
   display: flex;
   align-items: center;
   padding: 0;
-  gap: 1.25rem;
+  gap: 0.25rem;
   font-size: 1.25rem;
 }
 
 #about .top ul a {
   color: var(--neutrals-n400);
+  padding: 0 0.5rem;
+}
+
+#about ul a:hover {
+  color: var(--primary);
 }
 
 #about .top .action {
@@ -458,17 +468,18 @@ header .menu-toggle {
 
 #about ul.skill-sets > li .skill-items {
   display: flex;
-  flex-direction: column;
   gap: 0.75rem;
   margin: 0.75rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 300ms ease;
+  transition: max-height 100ms ease;
+  flex-wrap: wrap;
 }
 
 #about ul.skill-sets > li.active .skill-items {
-  max-height: 1000px;
+  max-height: 600px;
   overflow: visible;
+  transition: max-height 400ms ease;
 }
 
 #about ul.skill-sets > li .skill-items li {
@@ -563,8 +574,9 @@ footer {
   overflow: hidden;
 }
 
+.blury header,
 .blury section,
-.blury header {
+.blury footer {
   filter: blur(0.5rem);
 }
 
