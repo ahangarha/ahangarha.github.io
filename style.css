@@ -424,6 +424,7 @@ header .menu-toggle {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--neutrals-n40);
+  overflow: hidden;
 }
 
 #about ul.skill-sets > li .title {
@@ -432,6 +433,7 @@ header .menu-toggle {
   align-items: center;
   height: 4.5rem;
   padding: 0.75rem;
+  cursor: pointer;
 }
 
 #about ul.skill-sets > li .title h4 {
@@ -450,10 +452,6 @@ header .menu-toggle {
   color: var(--neutrals-n300);
 }
 
-#about ul.skill-sets > li.active {
-  border-bottom: none;
-}
-
 #about ul.skill-sets > li.active i {
   transform: rotate(90deg);
 }
@@ -463,6 +461,14 @@ header .menu-toggle {
   flex-direction: column;
   gap: 0.75rem;
   margin: 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease;
+}
+
+#about ul.skill-sets > li.active .skill-items {
+  max-height: 1000px;
+  overflow: visible;
 }
 
 #about ul.skill-sets > li .skill-items li {

@@ -147,6 +147,18 @@ works.forEach((work) => {
   });
 });
 
+// Handle skill-set appearance
+const skillSets = document.querySelectorAll('.skill-sets > li');
+skillSets.forEach((skillSet) => {
+  const titleElement = skillSet.querySelector('.title');
+  titleElement.addEventListener('click', () => {
+    skillSets.forEach((skillSet) => {
+      skillSet.classList.remove('active');
+    });
+    skillSet.classList.add('active');
+  });
+});
+
 // Contact Form Validation
 const contactForm = document.querySelector('#contact form');
 
