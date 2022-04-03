@@ -24,6 +24,17 @@ document.querySelectorAll('.mobile-menu-content li a').forEach((link) => {
 
 const works = [
   {
+    name: 'Toofun',
+    description: 'Toofun is a simple project made with TALL stack for brainstorming which doesn\'t need registration and doesn\'t collect any personal data.',
+    imageURL: './assets/img/screenshot-toofun.jpg',
+    technologies: ['Laravel', 'Tailwindcss', 'Livewire', 'AlpineJS'],
+    liveURL: '',
+    sourceURL: 'https://framagit.org/ahangarha/toofun',
+    madeFor: 'Freelance',
+    topic: 'Full-Stack',
+    date: '2021',
+  },
+  {
     name: 'todo.js',
     description: 'A simple todo list app made with vanilla JavaScript.',
     imageURL: './assets/img/todo-js.png',
@@ -99,6 +110,8 @@ works.forEach((work) => {
     event.preventDefault();
     document.body.classList.toggle('blury');
 
+    const liveURLElement = `<a href="${work.liveURL}" target="_blank" class="btn">See Live <i class="fa fa-link"></i></a>`;
+
     document.getElementById('popup-wrapper').innerHTML = `
       <div id="work-popup-wrapper" class="">
         <div class="blended-bg"></div>
@@ -128,7 +141,7 @@ works.forEach((work) => {
                   ${techs}
                 </ul>
                 <div class="action">
-                  <a href="${work.liveURL}" target="_blank" class="btn">See Live <i class="fa fa-link"></i></a>
+                  ${work.liveURL.length ? liveURLElement : ''}
                   <a href="${work.sourceURL}" target="_blank" class="btn">See Source <i class="fa fa-github"></i></a>
                 </div>
               </div>
