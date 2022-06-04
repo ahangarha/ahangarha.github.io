@@ -124,6 +124,7 @@ works.forEach((work) => {
     document.body.classList.toggle('blury');
 
     const liveURLElement = `<a href="${work.liveURL}" target="_blank" class="btn">See Live <i class="fa fa-link"></i></a>`;
+    const sourceURLElement = `<a href="${work.sourceURL}" target="_blank" class="btn">See Source <i class="fa fa-github"></i></a>`;
 
     document.getElementById('popup-wrapper').innerHTML = `
       <div id="work-popup-wrapper" class="">
@@ -155,7 +156,7 @@ works.forEach((work) => {
                 </ul>
                 <div class="action">
                   ${work.liveURL.length ? liveURLElement : ''}
-                  <a href="${work.sourceURL}" target="_blank" class="btn">See Source <i class="fa fa-github"></i></a>
+                  ${work.sourceURL.length ? sourceURLElement : ''}
                 </div>
               </div>
             </div>
