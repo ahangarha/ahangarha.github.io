@@ -25,11 +25,24 @@ document.querySelectorAll('.mobile-menu-content li a').forEach((link) => {
 const works = [
   {
     name: 'Toofun',
-    description: 'Toofun is a simple project made with TALL stack for brainstorming which doesn\'t need registration and doesn\'t collect any personal data.',
+    description:
+      "Toofun is a simple project made with TALL stack for brainstorming which doesn't need registration and doesn't collect any personal data.",
     imageURL: './assets/img/screenshot-toofun.jpg',
     technologies: ['Laravel', 'Tailwindcss', 'Livewire', 'AlpineJS'],
     liveURL: '',
     sourceURL: 'https://framagit.org/ahangarha/toofun',
+    madeFor: 'Freelance',
+    topic: 'Full-Stack',
+    date: '2021',
+  },
+  {
+    name: 'PeshCash',
+    description:
+      'Collection of best discounts and shopping opportunities in Kabul, Afghanistan.',
+    imageURL: './assets/img/screenshot-peshcash.jpg',
+    technologies: ['Laravel', 'Tailwindcss', 'AlpineJS'],
+    liveURL: '',
+    sourceURL: '',
     madeFor: 'Freelance',
     topic: 'Full-Stack',
     date: '2021',
