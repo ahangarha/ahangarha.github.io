@@ -27,7 +27,7 @@ const works = [
     name: 'Railicious',
     description:
       'A web application made with Rails to add recipes.',
-    imageURL: './assets/img/portf-railicious.jpg',
+    imageURL: './assets/img/screenshot-railicious.jpg',
     technologies: ['Ruby on Rails', 'Tailwindcss'],
     liveURL: 'https://railicious.herokuapp.com/',
     sourceURL: 'https://github.com/ahangarha/Railicious',
