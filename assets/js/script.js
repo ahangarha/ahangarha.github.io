@@ -24,6 +24,18 @@ document.querySelectorAll('.mobile-menu-content li a').forEach((link) => {
 
 const works = [
   {
+    name: 'Railicious',
+    description:
+      'A web application made with Rails to add recipes.',
+    imageURL: './assets/img/portf-railicious.jpg',
+    technologies: ['Ruby on Rails', 'Tailwindcss'],
+    liveURL: 'https://railicious.herokuapp.com/',
+    sourceURL: 'https://github.com/ahangarha/Railicious',
+    madeFor: 'Microverse',
+    topic: 'Full-Stack',
+    date: '2022',
+  },
+  {
     name: 'Toofun',
     description:
       "Toofun is a simple project made with TALL stack for brainstorming which doesn't need registration and doesn't collect any personal data.",
