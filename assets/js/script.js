@@ -29,13 +29,14 @@ socialLinkCopyPlaceholders.forEach((placeholder) => {
   placeholder.innerHTML = originalSocialLink.innerHTML;
 });
 
+// Dynamically add works
 const works = [
   {
     name: 'Al Mentoria',
     description:
-      'Al-Mentoria, is a place for new programmers to reserve a meeting with some more experienced programmer as their mentor based on a chosen topic. We built the back-end using Rails and the front using React/Redux.',
+      'Al-Mentoria, is a mentorship platform for new programmers to reserve a meeting with more experienced developers based on a chosen topic. It is built with Ruby on Rails (back-end) and Reactjs (front-end).',
     imageURL: './assets/img/screenshot-almentoria.jpg',
-    technologies: ['Ruby on Rails', 'React', 'Tailwindcss'],
+    technologies: ['Ruby on Rails', 'React', 'Tailwindcss', 'Rspec', 'Jest', 'RESTful API', 'JWT'],
     liveURL: 'https://al-mentoria.herokuapp.com/',
     sourceURL: 'https://github.com/UpliftLab/al-mentoria-frontend',
     madeFor: 'Microverse',
@@ -57,7 +58,7 @@ const works = [
   {
     name: 'Toofun',
     description:
-      "Toofun is a simple project made with TALL stack for brainstorming which doesn't need registration and doesn't collect any personal data.",
+      "Toofun is a simple privacy focused web application made with TALL stack for brainstorming. It doesn't need registration and doesn't collect any tracable data from users. Simply create a new topic by adding description and active period. Share the link with the team and wait till they share their toughts. After commenting period, all comments get listed in random order. Topics and their comments get deleted from database after the given active period.",
     imageURL: './assets/img/screenshot-toofun.jpg',
     technologies: ['Laravel', 'Tailwindcss', 'Livewire', 'AlpineJS'],
     liveURL: '',
