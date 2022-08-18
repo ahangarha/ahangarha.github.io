@@ -72,12 +72,12 @@ const works = [
   {
     name: 'PeshCash',
     description:
-      'Collection of best discounts and shopping opportunities in Kabul, Afghanistan.',
+      'PeshCash (means offer in Persian/Dari) was a web application to share best offers and discounts of the market in Kabul, Afghanistan. Users could filter offers based on the desired categories and see details for each offer in an intuitive and responsive design. PeshCash was built with Laravel for back-end and Alpinejs for bringing reactiveness on fron-end.',
     imageURL: './assets/img/screenshot-peshcash.jpg',
     technologies: ['Laravel', 'Tailwindcss', 'AlpineJS'],
     liveURL: '',
     sourceURL: '',
-    madeFor: 'Freelance',
+    madeFor: 'SamaRayan',
     topic: 'Full-Stack',
     date: '2021',
   },
