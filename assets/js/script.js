@@ -22,6 +22,13 @@ document.querySelectorAll('.mobile-menu-content li a').forEach((link) => {
   });
 });
 
+// Copy social links
+const originalSocialLink = document.querySelector('.social-links');
+const socialLinkCopyPlaceholders = document.querySelectorAll('.social-links-copy');
+socialLinkCopyPlaceholders.forEach((placeholder) => {
+  placeholder.innerHTML = originalSocialLink.innerHTML;
+});
+
 const works = [
   {
     name: 'Al Mentoria',
