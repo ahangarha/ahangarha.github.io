@@ -30,6 +30,8 @@ socialLinkCopyPlaceholders.forEach((placeholder) => {
 });
 
 // Dynamically add works
+const truncate = (text, maxLength = 100) => (text.length <= maxLength ? text : `${text.slice(0, maxLength - 3)}...`);
+
 const works = [
   {
     name: 'Al Mentoria',
@@ -130,7 +132,7 @@ works.forEach((work) => {
           </div>
 
           <p class="description">
-            ${work.description}
+            ${truncate(work.description, 200)}
           </p>
 
           <ul class="techs">
