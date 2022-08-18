@@ -164,8 +164,8 @@ works.forEach((work) => {
       <div id="work-popup-wrapper" class="">
         <div class="blended-bg"></div>
         <div id="work-popup">
+          <a href="#" id="close-popup-btn" onclick=""><img src="./assets/img/icon-close-dark.svg" alt=""></a>
           <div class="work-popup-content">
-            <a href="#" id="close-popup-btn" onclick=""><img src="./assets/img/icon-close-dark.svg" alt=""></a>
             <div>
               <h2>${work.name}</h2>
               <div class="meta">
