@@ -14,16 +14,20 @@
     <title>Mostafa's Portfolio</title>
     <!-- Matomo -->
     <script>
-      var _paq = window._paq = window._paq || [];
+      var _paq = (window._paq = window._paq || []);
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://ahangarha-github-io.matomo.cloud/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
+      (function () {
+        var u = 'https://ahangarha-github-io.matomo.cloud/';
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
         _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src='//cdn.matomo.cloud/ahangarha-github-io.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = '//cdn.matomo.cloud/ahangarha-github-io.matomo.cloud/matomo.js';
+        s.parentNode.insertBefore(g, s);
       })();
     </script>
     <!-- End Matomo Code -->
@@ -87,21 +91,13 @@
           business, contact me!
         </p>
         <h3>Let's Contact</h3>
-        <ul>
+        <ul class="social-links">
           <li>
             <a
-              href="https://mas.to/@ahangarha"
+              href="https://github.com/ahangarha"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fa fa-mastodon"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/ahangarha"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fa fa-twitter"></i
+              ><i class="fa fa-github"></i
             ></a>
           </li>
           <li>
@@ -114,10 +110,26 @@
           </li>
           <li>
             <a
-              href="https://github.com/ahangarha"
+              href="https://angel.co/ahangarha"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fa fa-github"></i
+              ><i class="fa fa-angellist"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/ahangarha_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://hackers.town/@ahangarha"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa fa-mastodon"></i
             ></a>
           </li>
         </ul>
@@ -125,9 +137,7 @@
     </section>
 
     <section id="works" class="container">
-      <h2>
-        You need to enable javascript in your browser to be able to see works!
-      </h2>
+      <h2>JavaScript must be enabled in order to see my works!</h2>
     </section>
 
     <section id="about" class="container">
@@ -135,46 +145,12 @@
         <div class="top">
           <h2>About<br />Myself</h2>
           <p>
-            Hello I’m a software developer! I can help you build a product ,
-            feature or website Look through some of my work and experience! If
-            you like what you see and have a project you need coded, don’t
-            hestiate to contact me.
+            I’m a full-stack software developer! I enjoy building web
+            application using clean and testable code. My current stack is Ruby
+            on Rails and React.
           </p>
           <h3>Let's Contact</h3>
-          <ul>
-            <li>
-              <a
-                href="https://mas.to/@ahangarha"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="fa fa-mastodon"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/ahangarha"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="fa fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/ahangarha/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="fa fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/ahangarha"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="fa fa-github"></i
-              ></a>
-            </li>
-          </ul>
+          <ul class="social-links-copy"></ul>
           <div class="action">
             <a
               href="https://emma.cloud.tabdigital.eu/s/cnCSkfcTPBZyLFG"
@@ -193,7 +169,7 @@
                 <h4>Languages</h4>
                 <i class="fa fa-angle-right"></i>
               </div>
-              <ul class="skill-items">
+              <ul class="skill-items skill-items-min-width">
                 <li>
                   <img src="./assets/img/icon-js.png" alt="JS Icon" />
                   <span>JavaScript</span>
@@ -226,27 +202,16 @@
                 <i class="fa fa-angle-right"></i>
               </div>
               <ul class="skill-items">
-                <li>
-                  <span>GNU/Linux</span>
-                </li>
-                <li>
-                  <span>React.js</span>
-                </li>
-                <li>
-                  <span>Ruby on Rails</span>
-                </li>
-                <li>
-                  <span>Laravel</span>
-                </li>
-                <li>
-                  <span>Alpine.js</span>
-                </li>
-                <li>
-                  <span>Tailwindcss</span>
-                </li>
-                <li>
-                  <span>Git</span>
-                </li>
+                <li>GNU/Linux</li>
+                <li>React.js</li>
+                <li>Ruby on Rails</li>
+                <li>Laravel</li>
+                <li>Alpine.js</li>
+                <li>Tailwindcss</li>
+                <li>Git</li>
+                <li>Rspec</li>
+                <li>Capybara</li>
+                <li>Jest</li>
               </ul>
             </li>
             <li>

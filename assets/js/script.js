@@ -22,13 +22,23 @@ document.querySelectorAll('.mobile-menu-content li a').forEach((link) => {
   });
 });
 
+// Copy social links
+const originalSocialLink = document.querySelector('.social-links');
+const socialLinkCopyPlaceholders = document.querySelectorAll('.social-links-copy');
+socialLinkCopyPlaceholders.forEach((placeholder) => {
+  placeholder.innerHTML = originalSocialLink.innerHTML;
+});
+
+// Dynamically add works
+const truncate = (text, maxLength = 100) => (text.length <= maxLength ? text : `${text.slice(0, maxLength - 3)}...`);
+
 const works = [
   {
     name: 'Al Mentoria',
     description:
-      'Al-Mentoria, is a place for new programmers to reserve a meeting with some more experienced programmer as their mentor based on a chosen topic. We built the back-end using Rails and the front using React/Redux.',
+      'Al-Mentoria, is a mentorship platform for new programmers to reserve a meeting with more experienced developers based on a chosen topic. It is built with Ruby on Rails (back-end) and Reactjs (front-end).',
     imageURL: './assets/img/screenshot-almentoria.jpg',
-    technologies: ['Ruby on Rails', 'React', 'Tailwindcss'],
+    technologies: ['Ruby on Rails', 'React', 'Tailwindcss', 'Rspec', 'Jest', 'RESTful API', 'JWT'],
     liveURL: 'https://al-mentoria.herokuapp.com/',
     sourceURL: 'https://github.com/UpliftLab/al-mentoria-frontend',
     madeFor: 'Microverse',
@@ -50,7 +60,7 @@ const works = [
   {
     name: 'Toofun',
     description:
-      "Toofun is a simple project made with TALL stack for brainstorming which doesn't need registration and doesn't collect any personal data.",
+      "Toofun is a simple privacy focused web application made with TALL stack for brainstorming. It doesn't need registration and doesn't collect any tracable data from users. Simply create a new topic by adding description and active period. Share the link with the team and wait till they share their toughts. After commenting period, all comments get listed in random order. Topics and their comments get deleted from database after the given active period.",
     imageURL: './assets/img/screenshot-toofun.jpg',
     technologies: ['Laravel', 'Tailwindcss', 'Livewire', 'AlpineJS'],
     liveURL: '',
@@ -62,12 +72,12 @@ const works = [
   {
     name: 'PeshCash',
     description:
-      'Collection of best discounts and shopping opportunities in Kabul, Afghanistan.',
+      'PeshCash (means offer in Persian/Dari) was a web application to share best offers and discounts of the market in Kabul, Afghanistan. Users could filter offers based on the desired categories and see details for each offer in an intuitive and responsive design. PeshCash was built with Laravel for back-end and Alpinejs for bringing reactiveness on fron-end.',
     imageURL: './assets/img/screenshot-peshcash.jpg',
     technologies: ['Laravel', 'Tailwindcss', 'AlpineJS'],
     liveURL: '',
     sourceURL: '',
-    madeFor: 'Freelance',
+    madeFor: 'SamaRayan',
     topic: 'Full-Stack',
     date: '2021',
   },
@@ -122,7 +132,7 @@ works.forEach((work) => {
           </div>
 
           <p class="description">
-            ${work.description}
+            ${truncate(work.description, 200)}
           </p>
 
           <ul class="techs">
@@ -145,7 +155,6 @@ works.forEach((work) => {
 
   document.getElementById(work.name).addEventListener('click', (event) => {
     event.preventDefault();
-    document.body.classList.toggle('blury');
 
     const liveURLElement = `<a href="${work.liveURL}" target="_blank" class="btn">See Live <i class="fa fa-link"></i></a>`;
     const sourceURLElement = `<a href="${work.sourceURL}" target="_blank" class="btn">See Source <i class="fa fa-github"></i></a>`;
@@ -154,8 +163,8 @@ works.forEach((work) => {
       <div id="work-popup-wrapper" class="">
         <div class="blended-bg"></div>
         <div id="work-popup">
+          <a href="#" id="close-popup-btn" onclick=""><img src="./assets/img/icon-close-dark.svg" alt=""></a>
           <div class="work-popup-content">
-            <a href="#" id="close-popup-btn" onclick=""><img src="./assets/img/icon-close-dark.svg" alt=""></a>
             <div>
               <h2>${work.name}</h2>
               <div class="meta">
@@ -193,7 +202,6 @@ works.forEach((work) => {
       .addEventListener('click', (event) => {
         event.preventDefault();
         document.getElementById('popup-wrapper').innerHTML = '';
-        document.body.classList.toggle('blury');
       });
   });
 });

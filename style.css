@@ -488,7 +488,7 @@ header .menu-toggle {
   gap: 1rem;
   background: var(--neutrals-n10);
   border-radius: 0.5rem;
-  padding: 0.75rem;
+  padding: 0.25rem 0.75rem;
 }
 
 #about ul.skill-sets > li .skill-items li img {
@@ -570,16 +570,6 @@ footer {
   text-align: center;
 }
 
-.blury {
-  overflow: hidden;
-}
-
-.blury header,
-.blury section,
-.blury footer {
-  filter: blur(0.5rem);
-}
-
 #work-popup-wrapper .blended-bg {
   background-color: var(--neutrals-n50);
 }
@@ -593,6 +583,8 @@ footer {
   z-index: 11;
   padding: 3.125rem 1rem;
   height: auto;
+  backdrop-filter: blur(0.25rem);
+  background: #0005;
 }
 
 #work-popup .work-popup-content {
@@ -673,8 +665,15 @@ footer {
 
 #close-popup-btn {
   position: absolute;
+  top: 1rem;
   right: 1rem;
-  height: 1rem;
+  z-index: 1;
+  background: white;
+  padding: 0.25rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: grid;
+  box-shadow: 0 0.25rem 0.5rem #0003;
 }
 
 @media (min-width: 992px) {
@@ -794,6 +793,9 @@ footer {
   #about ul.skill-sets > li .skill-items li {
     flex-direction: column;
     align-items: start;
+  }
+
+  #about ul.skill-sets > li .skill-items.skill-items-min-width li {
     min-width: 122px;
   }
 
