@@ -570,16 +570,6 @@ footer {
   text-align: center;
 }
 
-.blury {
-  overflow: hidden;
-}
-
-.blury header,
-.blury section,
-.blury footer {
-  filter: blur(0.5rem);
-}
-
 #work-popup-wrapper .blended-bg {
   background-color: var(--neutrals-n50);
 }
@@ -593,6 +583,8 @@ footer {
   z-index: 11;
   padding: 3.125rem 1rem;
   height: auto;
+  backdrop-filter: blur(0.25rem);
+  background: #0005;
 }
 
 #work-popup .work-popup-content {

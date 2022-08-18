@@ -155,7 +155,6 @@ works.forEach((work) => {
 
   document.getElementById(work.name).addEventListener('click', (event) => {
     event.preventDefault();
-    document.body.classList.toggle('blury');
 
     const liveURLElement = `<a href="${work.liveURL}" target="_blank" class="btn">See Live <i class="fa fa-link"></i></a>`;
     const sourceURLElement = `<a href="${work.sourceURL}" target="_blank" class="btn">See Source <i class="fa fa-github"></i></a>`;
@@ -203,7 +202,6 @@ works.forEach((work) => {
       .addEventListener('click', (event) => {
         event.preventDefault();
         document.getElementById('popup-wrapper').innerHTML = '';
-        document.body.classList.toggle('blury');
       });
   });
 });
